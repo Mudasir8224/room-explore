@@ -30,11 +30,10 @@ abstract class RoomDb : RoomDatabase() {
             wordDao.deleteAll()
 
             // Add sample words.
-            var word = Word(1, "Hello")
-            wordDao.insert(word)
-            word = Word(2, "World")
-            wordDao.insert(word)
-
+//            var word = Word( "Hello")
+//            wordDao.insert(word)
+//            word = Word( "World")
+//            wordDao.insert(word)
             // TODO: Add your own words!
         }
     }

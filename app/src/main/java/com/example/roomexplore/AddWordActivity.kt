@@ -15,6 +15,7 @@ class AddWordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_word)
+
         editWordView = findViewById(R.id.edit_word)
         button_save = findViewById(R.id.button_save)
         clickEvent()

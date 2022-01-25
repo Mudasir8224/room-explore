@@ -1,6 +1,7 @@
 package com.example.roomexplore
 
 import androidx.lifecycle.*
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class MyViewModel(private val myRepository: MyRepository) : ViewModel() {
@@ -16,8 +17,11 @@ class MyViewModel(private val myRepository: MyRepository) : ViewModel() {
      * Launching a new coroutine to insert the data in a non-blocking way
      */
 
-    fun insert(word: Word) = viewModelScope.launch {
-        myRepository.insert(word)
+    fun insert(word: Word): Job {
+        val launch = viewModelScope.launch {
+            myRepository.insert(word)
+        }
+        return launch
     }
 }
 
